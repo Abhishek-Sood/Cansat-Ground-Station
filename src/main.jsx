@@ -3,7 +3,7 @@
 // Import necessary modules and components
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
+import App from "./App";
 import "./index.css";
 import store from "./app/store";
 import { Provider } from "react-redux";
