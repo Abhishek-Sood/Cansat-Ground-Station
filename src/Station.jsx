@@ -8,7 +8,7 @@ import Altimeter from "./components/InstrumentCluster/Altimeter/Altimeter";
 import VerticalSpeed from "./components/InstrumentCluster/VerticalSpeed/VerticalSpeed";
 import Rocketmodel from "./components/Rocketmodel/Rocketmodel";
 import Heading from "./components/InstrumentCluster/Heading/Heading";
-import './App.css'
+import './Station.css'
 // Define the App component
 const Station = () => {
   // Use the useSelector hook to extract telemetry data from the Redux store
