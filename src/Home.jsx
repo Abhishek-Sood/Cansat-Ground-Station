@@ -3,6 +3,7 @@ import {useNavigate} from 'react-router-dom';// Importing useNavigate hook from 
 import './Home.css'// Importing CSS file for styling
 // Import the components used in the Navbar
 import ViewButton from "./ViewButton";
+import Typewriter from 'typewriter-effect';
 
 
 function Home() {// Declaring Home component
@@ -28,8 +29,19 @@ function Home() {// Declaring Home component
             </div>
             <div className="div-5">
                {/* Title */}
-              Empowering Exploration: Open Source Ground Station for Cansat
-              Satellites
+               <Typewriter
+                  options={{
+                    strings: ['Empowering Exploration-Open Source Ground Station for Cansat Satellites',
+                    'Connecting the Stars-Open Source Ground Stations',
+                    'Unlocking the Sky-Open Source Ground Station Innovation'
+                  ],
+                    autoStart: true,
+                    loop: true,
+                    typeSpeed: 1000, 
+                  }}
+               />
+              {/* Empowering Exploration: Open Source Ground Station for Cansat
+              Satellites */}
             </div>
             <div>
                {/* Button to navigate to the '/station' route */}
