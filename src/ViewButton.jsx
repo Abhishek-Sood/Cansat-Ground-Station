@@ -9,7 +9,7 @@ const ViewButton = () => {
     const navigate=useNavigate(); // Initializing navigate function using useNavigate hook
    // Function to navigate to the '/station' route
   const Station=()=>{
-    navigate('/station')
+    navigate('/Station')
   }
     return (
         <div className="ViewButton">
@@ -18,9 +18,11 @@ const ViewButton = () => {
               backgroundColor:"black",
               border: "1px solid white",
               "&:hover": {
-                backgroundColor: "white",
+                backgroundColor: "#0072aa",
+                border: "1px solid black",
               },
               minWidth: "230px",
+              minHeight:'55px'
             }}
             onClick={Station}
           >
