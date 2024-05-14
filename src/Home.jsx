@@ -1,13 +1,11 @@
 import * as React from "react";
 import {useNavigate} from 'react-router-dom';// Importing useNavigate hook from react-router-dom
 import './Home.css'// Importing CSS file for styling
+// Import the components used in the Navbar
+import ViewButton from "./components/Serial/UI/ViewButton";
+
 
 function Home() {// Declaring Home component
-  const navigate=useNavigate(); // Initializing navigate function using useNavigate hook
-   // Function to navigate to the '/station' route
-  const Station=()=>{
-    navigate('/station')
-  }
   // Returning JSX for Home component
   return (
     <>
@@ -35,10 +33,11 @@ function Home() {// Declaring Home component
             </div>
             <div>
                {/* Button to navigate to the '/station' route */}
-              <button className="div-6" onClick={Station}>
-                <div className="div-7">View</div>
-              </button>
+              <ViewButton />
             </div>
+            
+            
+          
           </div>
         </div>
       </div>
