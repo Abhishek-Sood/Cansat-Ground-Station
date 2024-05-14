@@ -2,7 +2,7 @@ import * as React from "react";
 import {useNavigate} from 'react-router-dom';// Importing useNavigate hook from react-router-dom
 import './Home.css'// Importing CSS file for styling
 // Import the components used in the Navbar
-import ViewButton from "./components/Serial/UI/ViewButton";
+import ViewButton from "./ViewButton";
 
 
 function Home() {// Declaring Home component
