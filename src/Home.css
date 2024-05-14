@@ -56,10 +56,10 @@
     }
   }
   .div-5 {
-    color: #707070;
+    color: #656464;
     font-family: Roboto, sans-serif;
-    margin-top: 20px;
-    font-size:20px;
+    margin-top: 10px;
+    font-size:17px;
   }
   @media (max-width: 991px) {
     .div-5 {
@@ -82,4 +82,8 @@
       white-space: initial;
       padding: 0 20px;
     }
+  }
+
+  .ViewButton{
+    margin-top:25px;
   }
