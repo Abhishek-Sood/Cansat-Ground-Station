@@ -1,40 +1,19 @@
-//This is the App component that renders different components like Navbar, Airspeed ... etc.
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Station from './Station';
+import Home from './Home';
 
-// Import necessary modules and components
-import { useSelector } from "react-redux";
-import Navbar from "./components/Navbar/Navbar";
-import AirSpeed from "./components/InstrumentCluster/AirSpeed/AirSpeed";
-import Altimeter from "./components/InstrumentCluster/Altimeter/Altimeter";
-import VerticalSpeed from "./components/InstrumentCluster/VerticalSpeed/VerticalSpeed";
-import Rocketmodel from "./components/Rocketmodel/Rocketmodel";
-import Heading from "./components/InstrumentCluster/Heading/Heading";
-import './App.css'
-// Define the App component
-const App = () => {
-  // Use the useSelector hook to extract telemetry data from the Redux store
-  const telemetryData = useSelector((state) => state.telemetry.value);
-  // Render the App component
+
+
+export default function App() {
   return (
     <>
-      <div>
-        <Navbar />
-      </div>
-      <div style={{ display: "flex",justifyContent:'center',alignItems:'center'}} id="Main_container">
-          <Rocketmodel />
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          <div style={{ display: "flex" }}>
-            <AirSpeed />
-            <Altimeter />
-          </div>
-          <div style={{ display: "flex" }}>
-            <VerticalSpeed />
-            <Heading pitch={telemetryData.tiltX} roll={telemetryData.tiltY} />
-          </div>
-        </div>
-      </div>
+      <BrowserRouter> 
+        <Routes>
+          <Route path='/Station' element={<Station />} />
+          <Route path='/' element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
-};
-
-// Export the App component
-export default App;
+}
