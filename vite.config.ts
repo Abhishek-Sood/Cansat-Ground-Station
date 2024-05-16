@@ -1,14 +1,15 @@
-import { defineConfig } from "vite";
+import { defineConfig, loadEnv } from "vite";
 import react from "@vitejs/plugin-react";
 import svgr from "vite-plugin-svgr";
-import { UserConfig } from "vite";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), svgr()] as UserConfig["plugins"],
-  base: "",
+  define: {
+    "process.env.SOME_KEY": JSON.stringify(loadEnv.SOME_KEY),
+  },
   server: {
-    host: '0.0.0.0',
-    port: 5173
-  }
+    port: 3000,
+  },
+  plugins: [react(), svgr()],
+  base: "",
 });
