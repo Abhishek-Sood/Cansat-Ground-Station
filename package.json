@@ -13,10 +13,10 @@
     "serve": "vite preview",
     "electron": "wait-on tcp:3000 && cross-env IS_DEV=true electron .",
     "electron:pack": "electron-builder --dir",
-    "electron:dev": "concurrently -k \"cross-env BROWSER=none npm run dev\" \"npm run electron\"",
+    "electron:dev": "concurrently -k \"cross-env BROWSER=none yarn run dev\" \"yarn run electron\"",
     "electron:builder": "electron-builder",
     "build:for:electron": "tsc --noEmit && cross-env ELECTRON=true vite build",
-    "app:build": "npm run build:for:electron && npm run electron:builder"
+    "app:build": "yarn run build:for:electron && yarn run electron:builder"
   },
   "dependencies": {
     "@babel/core": "^7.0.0-0",
@@ -34,7 +34,7 @@
     "builder": "^5.0.0",
     "chart.js": "^4.4.3",
     "chartjs-adapter-date-fns": "^3.0.0",
-    "concurrently": "^8.0.0",
+    "concurrently": "^8.2.2",
     "cross-env": "^7.0.3",
     "date-fns": "^3.6.0",
     "dotenv": "^16.4.5",
