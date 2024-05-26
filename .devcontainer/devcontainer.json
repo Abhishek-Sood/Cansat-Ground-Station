@@ -1,26 +1,19 @@
 {
-    "name": "cansat-dev",
-    "build": {
-      "dockerfile": "Dockerfile",
-      "context": ".."
-    },
-    "customizations": {
-          "vscode": {
-              "extensions": [
-                  "dbaeumer.vscode-eslint",
-                  "esbenp.prettier-vscode"
-              ],
-              "settings": {
-                "terminal.integrated.defaultProfile.linux": "sh",
-              }
-          }
-    },
-    
-    
-    "forwardPorts": [
-      5173
-    ],
-    "postCreateCommand": "npm run dev",
-    "remoteUser": "node"
-  }
-  
+  "name": "cansat-dev",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "sh"
+      }
+    }
+  },
+
+  "forwardPorts": [3000],
+  "postCreateCommand": "npm run dev",
+  "remoteUser": "node"
+}
